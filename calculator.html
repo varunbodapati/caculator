@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Arithmetic operations in Java script</title>
+		<style type="text/css">
+			body{
+				background-color: #ffcdd2;
+			}
+			.center{
+				margin: auto;
+				width: 50%;
+				border: 5px solid black;
+				padding: 10px;
+				background-color: #f44336;
+			}
+			.head{
+				text-align: center;
+				background-color: #ef9a9a;
+				border: 5px solid black;
+
+			}
+
+			.body{
+				border :5px solid black;
+				padding: 10px;
+				background-color: #ffebee;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+			function add(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					var c=x+y;
+					document.getElementById('output').value=c;
+				}
+			}
+
+			function sub(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					var c=x-y;
+					document.getElementById('output').value=c;
+				}
+			}
+
+			function mul(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					var c=x*y;
+					document.getElementById('output').value=c;
+				}
+			}
+
+			function div(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					var c=x/y;
+					document.getElementById('output').value=c;
+				}
+			}
+
+			function exp(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					var c=x**y;
+					document.getElementById('output').value=c;
+				}
+			}
+
+			function per(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					var c=x%y;
+					document.getElementById('output').value=c;
+				}
+			}
+
+			function inc(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					x++;
+					y--;
+					document.getElementById('output').value=" "+x+" , "+y;
+				}
+			}
+
+			function dec(){
+				var x=document.getElementById('in1').value;
+				var y=document.getElementById('in2').value;
+				if(isNaN(x) || isNaN(y) || x=="" || y==""){
+					alert("Please enter a number");
+				}
+				else{
+					var x=parseInt(document.getElementById('in1').value);
+					var y=parseInt(document.getElementById('in2').value);
+					x--;
+					y--;
+					document.getElementById('output').value=" "+x+" , "+y;
+				}
+
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="center">
+			<div class="head">
+				<h1>Arithmetic operations</h1>
+			</div>
+			<div class="body">
+				<h3>Enter the first Number here:</h3>
+				<input type="text" name="number1" placeholder="Enter your first input number" size="70" style="height: 40px;" id="in1">
+				<br>
+				<h3>Enter the second number here:</h3>
+				<input type="text" name="number1" placeholder="Enter your second input number" size="70" style="height: 40px;" id="in2">
+				<br>
+				<br>
+				<h3>Please select the operator:</h3>
+				<table>
+					<tr>
+						<th><button style="width: 150px; height: 60px; font-size: 40px; " onclick="add()">+</button></th>
+						<th><button style="width: 150px; height: 60px; font-size: 50px; " onclick="sub()">-</button></th>
+						<th><button style="width: 150px; height: 60px; font-size: 40px; "onclick="mul()" >x</button></th>
+					</tr>
+					<tr>
+						<td><button style="width: 150px; height: 60px; font-size: 40px;" onclick="div()">/</button></td>
+						<td><button style="width: 150px; height: 60px; font-size: 40px;" onclick="exp()">^</button></td>
+						<td><button style="width: 150px; height: 60px; font-size: 40px;" onclick="per()">%</button></td>
+					</tr>
+					<tr>
+						<td><button style="width: 150px; height: 60px; font-size: 40px;" onclick="inc()">++</button></td>
+						<td><button style="width: 150px; height: 60px; font-size: 40px;" onclick="dec()">--</button></td>
+					</tr>
+				</table>
+				<div>
+					<h3>Your Output:</h3>
+					<input type="text" name="output" id="output" placeholder="Please don't write anything here" size="70" style="height: 40px;">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
